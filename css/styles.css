@@ -1,0 +1,553 @@
+/* General Styles */
+
+body {
+	font-family: 'Muli', sans-serif;
+}
+
+/* Styles for links */
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: red;
+}
+
+a:focus {
+	color: red;
+}
+
+/* Styles for data fetches */
+
+.data {
+	text-align: left;
+}
+
+.data p {
+	display: inline;
+}
+
+/* Styles for table */
+
+table {
+	width: 100%;
+}
+
+thead {
+	color: GoldenRod;
+}
+
+td {
+	width: 30%;
+	text-align: center;
+}
+
+th {
+	text-align: center;
+}
+
+/* Styles for li elements */
+
+li {
+	text-align: left;
+}
+
+/* Background image for main page */
+
+#bg {
+	position: fixed; 
+  	top: -50%; 
+  	left: -50%; 
+  	width: 200%; 
+  	height: 200%;
+}
+
+#bg img {
+	position: absolute; 
+  	top: 0; 
+  	left: 0; 
+  	right: 0; 
+  	bottom: 0; 
+  	margin: auto; 
+  	min-width: 50%;
+  	min-height: 50%;
+}
+
+/* Background styling for other sites */
+
+.content-other {
+	font-family: sans-serif;
+	color: white;
+	background-color: black;
+	opacity: 0.9;
+	font-size: 1.3em;
+	position: relative;
+	padding-top: 25px;
+	padding-bottom: 75px;
+	width: 75%;
+	margin: auto;
+	text-align: center;
+	z-index: 0;
+	padding-left: 20px;
+  	padding-right: 20px;
+  	margin-top: 60px;
+}
+
+.title-other {
+	color: white;
+	font-size: 1.8em;
+	position: relative;
+}
+
+.content-other p, h3, h4, h6 {
+	text-align: left;
+}
+
+/* Header */
+
+nav {
+	background-color: white;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	z-index: 1;
+}
+
+.menu_icon {
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 15px;
+	z-index: 2;
+}
+
+.menu_icon:hover {
+	background-color: red;
+}
+
+.menu_icon:focus {
+	background-color: red;
+}
+
+.icon_line {
+	width: 35px;
+  	height: 5px;
+  	background-color: black;
+  	margin: 6px 0;
+}
+
+/* Menu */
+
+.menu {
+	background-color: white;
+	opacity: 0.9;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	margin-top: 60px;
+	z-index: 1;
+	visibility: hidden;
+}
+
+.menu.show {
+	visibility: visible;
+}
+
+.menu a {
+	float: none;
+	display: block;
+	color: black;
+	text-align: left;
+	text-decoration: none;
+	font-size: 30px;
+	padding: 15px;
+}
+
+.menu a:hover {
+	background-color: white;
+	color: red;
+}
+
+.menu a:focus {
+	background-color: white;
+	color: red;
+}
+
+/* Toggle Font size */
+
+.change_font_size {
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 15px;
+	z-index: 2;
+}
+
+.change_font_size:hover {
+	background-color: red;
+}
+
+.change_font_size:focus {
+	background-color: red;
+}
+
+.change_font_size i {
+	color: black;
+	font-size: 35px;
+}
+
+.content-other.big {
+	font-size: 1.5em;
+	width: 80%;
+}
+
+/* Main */
+
+main {
+	width: 100%;
+	min-height: 900px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.title {
+	color: black;
+	background: white;
+	font-size: 1.8em;
+	position: relative;
+	margin-top: 20px;
+	opacity: 0.8;
+}
+
+.content {
+	font-family: sans-serif;
+	color: black;
+	font-size: 1.3em;
+	position: relative;
+	padding-top: 25px;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	z-index: 0;
+}
+
+.content p {
+	text-align: left;
+}
+
+.content h1 {
+	font-size: 1.3em;
+}
+
+.content a {
+	color: black;
+}
+
+.content a:hover {
+	color: GoldenRod;
+}
+
+.content a:focus {
+	color: GoldenRod;
+}
+
+/*
+Slide show on eindruecke.html 
+Credits to https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/
+*/
+
+.slideshow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.slideshow li span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	color: transparent;
+	background-position: 50% 50%;
+	z-index: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation: imageAnimation 21s linear infinite 0s;
+}
+
+.slideshow li div {
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0;
+	color: black;
+	animation: titleAnimation 21s linear infinite 0s;
+}
+
+.slideshow li div h3 {
+	font-family: sans-serif;
+	font-size: 60px;
+	padding-bottom: 0;
+	line-height: 50px;
+	text-align: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.slideshow li:nth-child(1) span {
+	background: url('../img/preise_desktop.jpg');
+}
+.slideshow li:nth-child(2) span {
+	background: url('../img/fruehstueck_desktop.jpg');
+	animation-delay: 7s;
+}
+.slideshow li:nth-child(3) span {
+	background: url('../img/einzel_desktop.jpg');
+	animation-delay: 14s;
+}
+
+.slideshow li:nth-child(2) div {
+	animation-delay: 7s;
+}
+.slideshow li:nth-child(3) div {
+	animation-delay: 14s;
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+/* Anfahrt */
+
+.googleMaps {
+	text-align: left;
+}
+
+/* Footer CSS */
+
+footer {
+	display: flex;
+	background-color: white;
+	color: white;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin: auto;
+}
+
+.column {
+	flex:50%;
+	padding: 10px;
+	text-align: center;
+}
+
+.column h3 {
+	text-align: center;
+}
+
+.column h5 {
+	cursor: pointer;
+}
+
+/* DSGVO pop-up */
+
+.dsgvo {
+	background-color: black;
+	color: white;
+	z-index: 2;
+	width: 100;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 30px;
+	visibility: visible;
+}
+
+.dsgvo.done {
+	visibility: hidden;
+	z-index: -1;
+}
+
+button {
+	background-color: white;
+	cursor: pointer;
+	border: black;
+	min-width: 100px;
+	height: 30px;
+	margin: 10px;
+}
+
+button:hover {
+	background-color: GoldenRod;
+}
+
+button:focus {
+	background-color: GoldenRod;
+}
+
+/* Youtube video centered */
+
+.iframe-container {
+	display: grid;
+  	height: 100vh;
+  	margin: 0;
+  	place-items: center center;
+  	width: 100%
+}
+
+.iframe-container iframe {
+	width: 100%;
+	height: 100%;
+}
+
+/* Youtube video full-screen */
+/*
+.iframe-container {
+	position: fixed; 
+  	top: -50%; 
+  	left: -50%; 
+  	width: 200%; 
+  	height: 200%;
+}
+
+.iframe-container iframe {
+	position: absolute; 
+  	top: 0; 
+  	left: 0; 
+  	right: 0; 
+  	bottom: 0; 
+  	margin: auto; 
+  	min-width: 50%;
+  	min-height: 50%;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 800px) {
+
+	.title-other {
+		font-size: 1.2em;
+	}
+
+	th, td, tr {
+		font-size: 0.9em;
+	}
+
+	.slideshow li:nth-child(1) span {
+		background: url('../img/preise_tablet.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+	}
+	.slideshow li:nth-child(2) span {
+		background: url('../img/fruehstueck_tablet.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		animation-delay: 7s;
+	}
+	.slideshow li:nth-child(3) span {
+		background: url('../img/einzel_tablet.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		animation-delay: 14s;
+	}
+
+	.slideshow li div h3 {
+		font-size: 40px;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	.title-other {
+		font-size: 1.0em;
+	}
+
+	th, td, tr {
+		font-size: 0.8em;
+	}
+
+	.slideshow li div h3 {
+		font-size: 30px;
+	}
+
+	.title {
+		font-size: 1.5em;
+	}
+
+}
+
+@media only screen and (max-width: 400px) {
+
+	.slideshow li:nth-child(1) span {
+		background: url('../img/preise_mobil.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+	}
+	.slideshow li:nth-child(2) span {
+		background: url('../img/fruehstueck_mobil.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		animation-delay: 7s;
+	}
+	.slideshow li:nth-child(3) span {
+		background: url('../img/einzel_mobil.jpg');
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		animation-delay: 14s;
+	}
+
+}
